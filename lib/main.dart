@@ -1,21 +1,24 @@
-import 'package:final_app/screens/home_screen.dart';
 import 'package:final_app/screens/splash_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+
 import 'firebase_options.dart';
+import 'widgets/websocket 2.dart';
 
 late Size mq;
-void main () async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  _intializeFirebase();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
-  SystemChrome.setPreferredOrientations(
+  await SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
-  
   runApp(const MyApp());
 }
 
@@ -26,6 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       
         title: 'Transcription_APP',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -39,11 +43,4 @@ class MyApp extends StatelessWidget {
         )),
         home: SplashScreen());
   }
-}
-
-Future <void>_intializeFirebase() async {
-  
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
 }

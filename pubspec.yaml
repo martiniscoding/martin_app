@@ -25,10 +25,17 @@ dependencies:
   flutter_platform_widgets: ^7.0.1
   cached_network_image: ^3.4.1
   speech_to_text: ^7.0.0
-  record: ^5.1.2
+  
   web_socket_channel: ^3.0.1
+   
   permission_handler: ^11.3.1
-  flutter_sound: ^9.16.3
+
+  just_audio: ^0.9.41
+  record: ^4.4.2
+  # flutter_sound: ^9.16.3
+ 
+  
+  
 
 dev_dependencies:
   flutter_test:

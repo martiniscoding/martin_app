@@ -1,13 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:final_app/models/chat_user.dart';
-import 'package:final_app/screens/chat_screen.dart';
 import 'package:final_app/widgets/voicetotext.dart';
+import 'package:final_app/widgets/websocket%202.dart';
+import 'package:final_app/widgets/websockets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:final_app/main.dart';
-import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
-import 'websockets.dart';
+import '../main.dart';
+import '../models/chat_user.dart';
 
 class ChatUserCard extends StatefulWidget {
   final ChatUser user;
@@ -26,7 +25,7 @@ class _ChatUserCardState extends State<ChatUserCard> {
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) =>voicetotext()));
+              context, MaterialPageRoute(builder: (_) => WebSocketDemo()));
         },
         child: ListTile(
           //profile picture

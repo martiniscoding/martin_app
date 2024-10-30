@@ -4,7 +4,6 @@
         android:label="martin_app"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon"
-        tools:node="replace"
     > 
         <activity
             android:name=".MainActivity"

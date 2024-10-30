@@ -1,9 +1,11 @@
-import 'package:final_app/api/apis.dart';
+import 'dart:developer';
+
 import 'package:final_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dart:developer';
 
+
+import '../api/apis.dart';
 import '../main.dart';
 import 'auth/login_screen.dart';
 
@@ -34,7 +36,6 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (_) => const LoginScreen()));
       }
-      
     });
   }
 
